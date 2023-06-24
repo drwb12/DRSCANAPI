@@ -204,8 +204,8 @@ export default {
   },
   mounted() {
       this.cardName = localStorage.getItem('cardName')
-      this.cardMonth = localStorage.getItem('cardMonth')
-      this.cardYear = localStorage.getItem('cardYear')
+      // this.cardMonth = localStorage.getItem('cardMonth')
+      // this.cardYear = localStorage.getItem('cardYear')
 
   },
   computed: {
@@ -245,11 +245,24 @@ export default {
   },
   methods: {
     sevePayment(){
-      localStorage.setItem('generateCardNumberMask',this.generateCardNumberMask)
       localStorage.setItem('cardName',this.cardName)
       localStorage.setItem('cardMonth',this.cardMonth)
       localStorage.setItem('cardYear',this.cardYear)
-      localStorage.setItem('cardCvv',this.cardCvv)
+      this.$toast.success('This Operation Completed Successfully', {
+            position: 'top-right',
+            timeout: 2000,
+            closeOnClick: true,
+            pauseOnFocusLoss: true,
+            pauseOnHover: true,
+            draggable: true,
+            draggablePercent: 0.6,
+            showCloseButtonOnHover: false,
+            hideProgressBar: true,
+            closeButton: 'button',
+            icon: 'fas fa-rocket',
+            rtl: false
+          })
+
     },
     flipCard(status) {
       this.isCardFlipped = status;
