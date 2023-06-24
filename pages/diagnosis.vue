@@ -100,7 +100,7 @@ export default {
       sickSelect:null,
       rotate: false,
       activePage: 'diagnosis',
-      counter: 0,
+      counter: 1,
       forWho: null,
       sickSelect: null,
       ans: '',

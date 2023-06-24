@@ -51,8 +51,31 @@
         <div v-if="counter == 2">
           <div class="container result">
             <h2 class="text-black">You result is </h2>
+            <img v-if="showImage" :src="showImage" class="img-fluid border rounded p-3 shadow mb-3" style="width: 300px; height: 300px;"/>
             <p class="text-left text-black">You May Suffer From</p>
-            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor sit amet, consectetur adipiscing elit, sed doeiusmod tempor</h5>
+            <h5>
+              your body isn't getting enough oxygen, making you feel very tired and weak
+              <ol class="mt-3 text-left">
+                <li class="mb-2">
+                  A person with reduced levels of hemoglobin may benefit from eating more iron-rich foods.
+                </li>
+                <li class="mb-2">
+                  An insufficient supply of healthy red blood cells (anemia).
+                  you may need to go to the doctor to get intravenous iron or blood transfusions.
+                </li>
+                <li class="mb-2">
+                  A low red blood cell count increases the risk of anemia. Ways of boosting red blood cells include eating foods that contain iron, vitamin B12 and B9, vitamin C, vitamin A, and copper. Increasing exercise levels and reducing alcohol intake may also help.
+                </li>
+                <li class="mb-2">
+                  your body is not making enough white blood cells. It can increase your risk of getting infections.
+                  Lean meats, such as fish, eggs seafood, and skinless poultry contain high quantities of protein. Great plant based sources include lentils, beans and soy. Zinc is one of the best foods to increase white blood cells you can consume as it can help the body produce more WBCs and makes existing WBCs more aggressive.
+                </li>
+                <li class="mb-2">
+                  you may have trouble stopping bleeding. Bleeding can happen inside your body, underneath your skin, or from the surface of your skin
+                  your doctor can replace lost blood with transfusions of packed red blood cells or platelets
+                </li>
+              </ol>
+            </h5>
             <div class="btns row">
                 <div class="col-md-10">
                   <div class="row">

@@ -169,7 +169,7 @@
               </div>
             </div>
 
-            <button class="btn btn-next w-50 m-auto">Save</button>
+            <button class="btn btn-next w-50 m-auto" @click.prevent="sevePayment()">Save</button>
           </div>
         </div>
       </div>
@@ -201,6 +201,12 @@ export default {
       isInputFocused: false
 
     }
+  },
+  mounted() {
+      this.cardName = localStorage.getItem('cardName')
+      this.cardMonth = localStorage.getItem('cardMonth')
+      this.cardYear = localStorage.getItem('cardYear')
+
   },
   computed: {
     getCardType() {
@@ -238,6 +244,13 @@ export default {
     }
   },
   methods: {
+    sevePayment(){
+      localStorage.setItem('generateCardNumberMask',this.generateCardNumberMask)
+      localStorage.setItem('cardName',this.cardName)
+      localStorage.setItem('cardMonth',this.cardMonth)
+      localStorage.setItem('cardYear',this.cardYear)
+      localStorage.setItem('cardCvv',this.cardCvv)
+    },
     flipCard(status) {
       this.isCardFlipped = status;
     },
